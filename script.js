@@ -1,6 +1,8 @@
 let color = 'black';
 let click = false;
 
+// Event Listener 
+
 document.addEventListener('DOMContentLoaded', function() {
     boardSize(16);
 
@@ -16,12 +18,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // button code to create grid according to user input
+
     let btn = document.querySelector('#create-grid');
     btn.addEventListener('click', function(){
         let size = getSize();
         boardSize(size);
     });
 })
+
+// Function to create grid
 
 function boardSize(size){
     let sketchpad = document.querySelector('#sketchpad');
@@ -39,6 +45,8 @@ function boardSize(size){
     }
 }
 
+// Function to get user input and validate it
+
 function getSize(){
     let userInput = document.querySelector('#grid-size').value;
     let message = document.querySelector('#message');
@@ -51,6 +59,8 @@ function getSize(){
         return userInput;
     }
 }
+
+// Function to color the divs
 
 function colorDiv(){
    if(click){
@@ -66,10 +76,14 @@ function colorDiv(){
    }
 }
 
+// Function to set color
+
 function setColor(colorChoice){
     color = colorChoice;
     return color;
 }
+
+// Function to reset the grid
 
 function reset(){
     let boxes = document.querySelectorAll('#sketchpad div');
