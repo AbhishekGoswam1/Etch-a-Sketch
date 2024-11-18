@@ -14,15 +14,19 @@
 
     <div class="header">
         <h1>Etch-a-Sketch</h1>
-        <h3>Choose the size of the grid</h3>
-        <input type="number" id="grid-size" min="1" max="100" value="16">
-        <button class="btn" id="create-grid">Create Grid</button>
+        <div class = "input-field">
+            <input type="number" id="grid-size" min="1" max="80">
+            <button class="btn" id="create-grid">Create Grid</button>
+        </div>
     </div>
+    <p id="message"></p>
+    <p id="draw"></p>
     <div id="btns">
-        <button class="btn" id="black">Black</button>
-        <button class="btn" id="red">Red</button>
-        <button class="btn" id="random">Random</button>
-        <button class="btn" id="reset">Reset</button>
+        <button class="btn" id="black" onclick="setColor('black')">Black</button>
+        <button class="btn" id="red" onclick="setColor('red')">Red</button>
+        <button class="btn" id="random" onclick="setColor('random')">Random</button>
+        <button class="btn" id="eraser" onclick="setColor('white')">Eraser</button>
+        <button class="btn" id="reset" onclick="reset()">Reset</button>
     </div>
     <div id="sketchpad"></div>
 
